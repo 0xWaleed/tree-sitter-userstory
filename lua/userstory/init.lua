@@ -1,10 +1,22 @@
 local M = {}
 
+local function get_root()
+	local root_dir = ""
+	for dir in vim.fs.parents(vim.api.nvim_buf_get_name(0)) do
+		if vim.fn.isdirectory(dir .. "/.git") == 1 then
+			root_dir = dir
+			break
+		end
+	end
+	return root_dir
+end
+
 function M.setup()
 	local name = "userstory"
 	require "nvim-treesitter.parsers".get_parser_configs()[name] = {
+
 		install_info = {
-			url = "./",
+			url = get_root(),
 			files = { "src/parser.c" }
 		}
 	}
