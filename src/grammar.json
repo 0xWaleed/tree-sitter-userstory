@@ -1,0 +1,121 @@
+{
+  "name": "userstory",
+  "rules": {
+    "source": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "userstory"
+      }
+    },
+    "userstory": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "role"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "requirement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "reason"
+        }
+      ]
+    },
+    "role": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "AS"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content"
+        }
+      ]
+    },
+    "requirement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "I_WANT"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content"
+        }
+      ]
+    },
+    "reason": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "SO"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content"
+        }
+      ]
+    },
+    "AS": {
+      "type": "STRING",
+      "value": "AS"
+    },
+    "I_WANT": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "I WANT"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "I_EXPECT"
+        }
+      ]
+    },
+    "I_EXPECT": {
+      "type": "STRING",
+      "value": "I EXPECT"
+    },
+    "SO": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "SO"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "SO_I"
+        }
+      ]
+    },
+    "SO_I": {
+      "type": "STRING",
+      "value": "SO I"
+    },
+    "content": {
+      "type": "STRING",
+      "value": ""
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}

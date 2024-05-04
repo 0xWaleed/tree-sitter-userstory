@@ -1,0 +1,151 @@
+[
+  {
+    "type": "I_WANT",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "I_EXPECT",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "SO",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "SO_I",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reason",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "SO",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "requirement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "I_WANT",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "role",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "userstory",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "userstory",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "reason",
+          "named": true
+        },
+        {
+          "type": "requirement",
+          "named": true
+        },
+        {
+          "type": "role",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "AS",
+    "named": true
+  },
+  {
+    "type": "I WANT",
+    "named": false
+  },
+  {
+    "type": "I_EXPECT",
+    "named": true
+  },
+  {
+    "type": "SO",
+    "named": false
+  },
+  {
+    "type": "SO_I",
+    "named": true
+  },
+  {
+    "type": "content",
+    "named": true
+  }
+]
