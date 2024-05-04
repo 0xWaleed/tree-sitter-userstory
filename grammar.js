@@ -15,6 +15,8 @@ module.exports = grammar({
 
     role: $ => seq(
       $.AS,
+      /(a|an)/,
+      /[a-z]+/
       // $.content
     ),
     requirement: $ => seq(
